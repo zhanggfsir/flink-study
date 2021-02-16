@@ -1,0 +1,94 @@
+
+有界流
+ExecutionEnvironment 用户获得执行的环境
+DataSet  flatMap filter  map group sum 等
+
+无界流 -- 实时流
+StreamExecutionEnvironment 封装了无界流计算使用的环境信息
+DataStream 是Flink生态中进行无界流数据计算的核心api DataSet  flatMap keyBy  sum 等
+
+
+
+
+standalone 计算资源的调度方式用官方开发的 不需要安装第三方调度工具，例如：yarn
+    jobManager 主节点 资源调度与分配 （类似yarn ） 进程 StandaloneSessionClusterEntryPoint
+    taskManager (从)工作进程                     进程 TaskManagerRunner
+
+    task slot 一个taskManager中包含多个task slot，对应着一个cpu核心，一个线程
+    CliFrontend 客户端提交脚本，会启动进程
+
+命令行启动方式
+flink run  -c   com.qf.demo01_bounded.sample04_srctarget_hdfs.BoundedFlowDemo \
+./flink-study-1.0-SNAPSHOT.jar \
+--input hdfs://ns1/flink/input \
+--output hdfs://ns1/flink/output
+
+
+
+on yarn
+flink 中只有yarn cluster 没有yarn client
+
+
+方式1 Yarn session 启动flink 集群 常驻在yarn中
+
+FlinkYarnSessionCli 客户端的前台进程，若是以后台进程的方式运行，改进程会结束 [ -d 就没了 ]
+
+yarn已经把flink整合
+颠覆： YarnSessionClusterEntrypoint=ApplicationMaster + JobManager 后2者都是运行在YarnSessionClusterEntrypoint进程中
+
+YarnSessionClusterEntrypoint即为Flink在Yarn上的 ApplicationMaster，同时也是JobManager；
+YarnTaskExecutorRunner负责接收 subTask，并运行，就是TaskManager
+
+
+方式2 独立的flink job
+
+
+
+
+
+
+/////////////   无界流   DataStream //////////////////////
+
+1. source是程序的数据源输入，你可以通过StreamExecutionEnvironment.addSource(sourceFunction)来为你的程序添加一个source。
+
+2. Transformations
+• map：输入一个元素，然后返回一个元素，做一些清洗转换等操作
+• flatmap：输入一个元素，可以返回零个，一个或者多个元素（压平的效果）
+• filter：过滤函数，对传入的数据进行判断，符合条件的数据会被留下
+• keyBy：根据指定的key进行分组，相同key的数据会进入同一个分区
+• reduce：对数据进行聚合操作，结合当前元素和上一次reduce返回的值进行聚合操作，然后返回一个新的值
+• aggregations：sum(),min(),max()等
+• window：窗口操作，在后面单独详解
+• union：合并多个流，新的流会包含所有流中的数据，但是union是一个限制，就是所有合并的流类型必须是一致的
+• connect：和union类似，但是只能连接两个流，两个流的数据类型可以不同，会对两个流中的数据应用不同的处理方法
+• CoMap, CoFlatMap：在ConnectedStreams中需要使用这种函数，类似于map和flatmap
+• Split：根据规则把一个数据流切分为多个流
+• Select：和split配合使用，选择切分后的流
+
+3. sink是程序结果输出，可以通过StreamExecutionEnvironment.addSink(sinkFunction)来为你的程序添加一个sink
+
+/////////////   有界流  DataSet  //////////////////////
+ 1. Data Sources
+• 基于文件：readTextFile(path)
+• 基于集合：fromCollection(Collection)
+
+2. Transformations
+• map：输入一个元素，然后返回一个元素，中间可以做一些清洗转换等操作
+• flatMap：输入一个元素，可以返回零个，一个或者多个元素
+• mapPartition：类似map，一次处理一个分区的数据
+• filter：过滤函数，对传入的数据进行判断，符合条件的数据会被留下
+• reduce：对数据进行聚合操作，结合当前元素和上一次reduce返回的值进行聚合操作，然后返回一个新的值
+• aggregate：sum、max、min等
+• distinct：返回一个数据集中去重之后的元素，data.distinct()
+• join：内连接
+• outerJoin：外链接
+• cross：获取两个数据集的笛卡尔积
+• union：返回两个数据集的总和，数据类型需要一致
+• first(n)：获取集合中的前N个元素
+• sortPartition：在本地对数据集的所有分区进行排序，通过sortPartition()的链接调用来完成对多个字段的排序
+
+3. Data Sink
+writeAsText()：将元素以字符串形式逐行写入，这些字符串通过调用每个元素的toString()方法来获取
+writeAsCsv()：将元组以逗号分隔写入文件中，行及字段之间的分隔是可配置的。每个字段的值来自对象的toString()
+print()：打印每个元素的toString()方法的值到标准输出或者标准错误输出流中
+

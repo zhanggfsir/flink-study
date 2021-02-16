@@ -1,0 +1,78 @@
+
+map 输入字符串，输出元组
+flatMap 要求datastream中每个元素的类型是集合类型
+reduce
+     第一个参数 前一个实例
+     第二个参数 后一个实例
+     返回值，依然是该类型的示例
+reduce
+    1.对keyedStream进行分析 示例 keyBy之后返回的Stream，即KeyedStream
+    2.对每个组中的新产生的数据进行实时的聚合(sum max min..)，不是对最终的结果进行聚合
+聚合  计数 sum max min等（聚合函数）
+
+reduce((before: Raytek, after: Raytek) => {
+      val maxTemperature = Math.max(before.temperature, after.temperature)
+      val minTimestamp = Math.min(before.timestamp, after.timestamp)
+      Raytek(before.id, maxTemperature, "", minTimestamp, "")
+    })
+
+
+只有split之后行程的 SplitStream 才有 select()方法
+split()     //  返回 SplitStream
+select(xx)  // 返回 DataStream  SplitStream[T] 继承自 extends DataStream[T]
+不过 不用太关注了
+ -- transformation算子之split已经过时了，在Flink高版本的api中，建议使用“侧输出流”来代替
+
+
+Connect
+
+
+union
+①将两个或是两个以上的DataStream使用union算子合并起来，进行集中式地处理
+②与connect算子不同，union要求待合并的两个DataStream中每个元素的类型必须一样
+③union之后可以使用链式编程的方式与别的DataStream继续合并
+链式编程：一个实例操作完毕之后返回的是自身的类型，可以继续调用该实例其他的方法
+
+Connect vs union
+①Union之前两个流的类型必须是一样，Connect可以不一样，在之后的coMap中再去调整成为一样的。
+②Connect只能操作两个流，Union可以操作多个。
+
+
+fromElements、fromCollection 属于source的算子
+
+
+
+
+sys.exit(-1)  不是0就是异常退出
+多参数传递
+//  参数示例 --hostname 47.104.86.109 --port 7777 --id raytek_2
+
+
+
+
+
+
+
+
+富函数（Rich Functions）本质：升级版的自定义transformation
+• “富函数”是DataStream API提供的一个函数类的接口，所有Flink函数类都有其Rich版本。它与常规函数的不同在于，可
+以获取运行环境的上下文，并拥有一些生命周期方法，所以可以实现更复杂的功能。
+• 常见的Rich Function有→RichMapFunction、RichFlatMapFunction、RichFilterFunction等等
+• Rich Function有一个生命周期的概念。典型的生命周期方法有：
+①open()方法→ Rich Function的初始化方法，当一个算子（例如：map或者filter）被调用之前open()会被调用；
+②close()方法→ 是生命周期中的最后一个调用的方法，做一些清理工作。
+③getRuntimeContext()方法→ 提供了函数的RuntimeContext的一些信息，例如函数执行的并行度，任务的名字，以及
+state状态
+
+
+
+
+对于socket 模拟的数据流，可以在虚拟机中 nc -lk port 进行数据测试。
+
+
+
+
+
+
+
+

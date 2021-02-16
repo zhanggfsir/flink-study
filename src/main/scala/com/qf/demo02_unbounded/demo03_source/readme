@@ -1,0 +1,75 @@
+1.要添加 flink 与 kafka 整合的依赖包
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka_2.11</artifactId>
+            <version>${flink.version}</version>
+            <scope>${scope}</scope>
+        </dependency>
+
+
+2. 关于如何导入隐式类
+import org.apache.flink.api.scala._
+
+a. double shift --> scala --> class
+b. 点击 类名 Copy Reference  即 org.apache.flink.api.scala
+c. 前加import 后加._      import xx._
+
+
+3.把一个集合转换为一个DataStream
+    val lst = Source.fromFile("a_input/raytek/raytek.log")
+      .getLines()
+      .toList
+
+    //③将集合中的数据封装到DataStream中去
+    val dataStream: DataStream[String] = env.fromCollection(lst)
+
+
+4. 使用@Data 注解之前，要先在pom中导入 lombok
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+        </dependency>
+
+lombok 是一个用于简化pojo类书写方式的库，可以使用一些注解的方式代替实体类中的代码。
+getter/stter → 对应着注解 @Data
+无参数的构造方法→ @NoArgsConstructor
+有参数的构造方法→ @AllArgsConstructor
+会生成toString()
+
+
+
+5. source的算子
+ fromElements、fromCollection 属于source的算子
+
+
+/*
+
+
+    →source算子之fromElements，参数是可变长的，类型可以是：基础数据类型，样例类，POJO(Plain
+      old java object),元组。
+    →source算子之fromCollection，参数类型是集合，集合既可以是java中的集合类型，也可以是scala
+    中的集合类型；将Java中的集合类型自动转换为scala中对应的集合类型，必须导入：
+    scala.collection.JavaConversions._
+                scala中的集合    java中的集合
+   ——————————————————————————————————————————————————————
+    scala.collection.Iterable <=> java.lang.Iterable
+    scala.collection.Iterable <=> java.util.Collection
+    scala.collection.Iterator <=> java.util.{ Iterator, Enumeration }
+    scala.collection.mutable.Buffer <=> java.util.List
+    scala.collection.mutable.Set <=> java.util.Set
+    scala.collection.mutable.Map <=> java.util.{ Map, Dictionary }
+    scala.collection.concurrent.Map <=> java.util.concurrent.ConcurrentMap
+    →有一个名为lombok的框架，可以简化java中实体类的数据，通过注解来代替getter/setter访问器，或
+    者是构造方法
+
+*/
+
+
+
+
+
+
+
+
