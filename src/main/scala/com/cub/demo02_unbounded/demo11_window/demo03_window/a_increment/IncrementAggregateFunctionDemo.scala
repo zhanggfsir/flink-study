@@ -27,7 +27,7 @@ object IncrementAggregateFunctionDemo {
 
     import org.apache.flink.api.scala._
 
-    val srcDataStream: DataStream[Raytek] = env.socketTextStream("NODE01", 6666)
+    val srcDataStream: DataStream[Raytek] = env.socketTextStream("47.104.86.109", 6666)
       .filter(_.trim.nonEmpty)
       .map(perTraveller => {
         val arr = perTraveller.split(",")

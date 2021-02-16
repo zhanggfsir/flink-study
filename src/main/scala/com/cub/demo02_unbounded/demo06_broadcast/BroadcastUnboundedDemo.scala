@@ -33,7 +33,7 @@ object BroadcastUnboundedDemo {
     //②准备两个无界流
     val dstream1: DataStream[(Int, Char)] = env.fromElements((1, '男'), (2, '女'))
 
-    val dstream2: DataStream[(Int, String, Int, String)] = env.socketTextStream("NODE01", 8888)
+    val dstream2: DataStream[(Int, String, Int, String)] = env.socketTextStream("47.104.86.109", 8888)
       .filter(_.trim.nonEmpty)
       .map(perLine => {
         val arr = perLine.split(",")

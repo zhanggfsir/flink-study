@@ -32,7 +32,7 @@ object AccumulatorDemo {
     //②实时读取流数据，计算，并显示结果
     import org.apache.flink.api.scala._
 
-    env.socketTextStream("NODE01", 8888)
+    env.socketTextStream("47.104.86.109", 8888)
       .filter(_.trim.nonEmpty)
       .map(perInfo => {
         val arr = perInfo.split(",")

@@ -27,7 +27,7 @@ object RedisSinkDemo {
 
     //②读取源，进行处理，最后落地到redis中
     //a)计算结果
-    val result: DataStream[Raytek] = env.socketTextStream("NODE01", 9999)
+    val result: DataStream[Raytek] = env.socketTextStream("47.104.86.109", 9999)
       .filter(_.trim.nonEmpty)
       .map(perLine => {
         val arr = perLine.split(",")
@@ -42,8 +42,8 @@ object RedisSinkDemo {
     //b)落地到redis中
     //i)准备连接redis分布式集群的参数信息
     val nodes: Set[InetSocketAddress] = Set(
-      new InetSocketAddress("NODE01", 7001),
-      new InetSocketAddress("NODE01", 7002),
+      new InetSocketAddress("47.104.86.109", 7001),
+      new InetSocketAddress("47.104.86.109", 7002),
       new InetSocketAddress("NODE02", 7003),
       new InetSocketAddress("NODE02", 7004),
       new InetSocketAddress("NODE03", 7005),

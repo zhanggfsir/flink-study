@@ -39,7 +39,7 @@ object RocksDBStateBackendDemo {
     //②计算，输出
     import org.apache.flink.api.scala._
 
-    env.socketTextStream("NODE01", 5555)
+    env.socketTextStream("47.104.86.109", 5555)
       .flatMap(_.split("\\s+")) //这些Operator在执行时产生的中间结果是存储在TaskManager进程的内存中的
       .filter(_.nonEmpty)
       .map((_, 1))

@@ -31,7 +31,7 @@ object DistrubutedCacheDemo {
 
     //③读取socket实时发送过来的学生信息，进行计算，并输出结果
     //(101,"jackson",1,"上海"),(104,"jone",2,"天津"),(108,"leon",1,"重庆")
-    env.socketTextStream("NODE01", 8888)
+    env.socketTextStream("47.104.86.109", 8888)
       .filter(_.trim.nonEmpty)
       .map(new RichMapFunction[String, (Int, String, Char, String)] {
 

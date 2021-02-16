@@ -25,7 +25,7 @@ object SelfDefineSinkDemo2 {
     //②读取源，进行处理，最后落地到es中
     import org.apache.flink.api.scala._
     //a)计算结果
-    val result: DataStream[Raytek] = env.socketTextStream("NODE01", 9999)
+    val result: DataStream[Raytek] = env.socketTextStream("47.104.86.109", 9999)
       .filter(_.trim.nonEmpty)
       .map(perLine => {
         val arr = perLine.split(",")

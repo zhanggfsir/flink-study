@@ -54,7 +54,7 @@ object ESSinkDemo2 {
 
     //i)准备httpHosts，用于存储与远程es分布式集群连接的信息
     val httpHosts: List[HttpHost] = List(
-      new HttpHost("NODE01", 9200),
+      new HttpHost("47.104.86.109", 9200),
       new HttpHost("NODE02", 9200),
       new HttpHost("NODE03", 9200)
     )
