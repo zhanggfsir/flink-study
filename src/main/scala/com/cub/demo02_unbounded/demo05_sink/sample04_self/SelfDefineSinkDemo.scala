@@ -20,7 +20,7 @@ import scala.collection.JavaConversions._
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月02日  
   *
-  * @author 徐文波
+  * @author
   * @version : 1.0
   */
 object SelfDefineSinkDemo {

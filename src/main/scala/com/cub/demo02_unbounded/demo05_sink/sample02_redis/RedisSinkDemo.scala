@@ -11,12 +11,12 @@ import org.apache.flink.streaming.connectors.redis.common.mapper.{RedisCommand, 
 
 
 /**
-  * Description：Redis Sink案例演示<br/>
+  * Description：Redis Sink案例演示   Source:socket，Sink:redis  <br/>
   * Copyright (c) ，2020 ， Jansonxu <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月02日  
   *
-  * @author 徐文波
+  * @author
   * @version : 1.0
   */
 object RedisSinkDemo {

@@ -9,12 +9,12 @@ import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKaf
 import org.apache.flink.api.scala._
 
 /**
-  * Description：kafkaSink演示  从kafka中读数据，并写入kafka <br/>
+  * Description：kafkaSink演示     Source:kafka ，Sink:kafka <br/>
   * Copyright (c) ，2020 ， Jansonxu <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日  
   *
-  * @author 徐文波
+  * @author
   * @version : 1.0
   */
 object KafkaSinkDemo {

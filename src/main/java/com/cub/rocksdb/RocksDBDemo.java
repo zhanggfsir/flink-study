@@ -11,7 +11,7 @@ import org.rocksdb.RocksDBException;
  * This program is protected by copyright laws. <br/>
  * Date： 2020年03月5日
  *
- * @author 徐文波
+ * @author
  * @version : 1.0
  */
 public class RocksDBDemo {

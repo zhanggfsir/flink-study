@@ -13,7 +13,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月04日  
   *
-  * @author 徐文波
+  * @author
   * @version : 1.0
   */
 object AccumulatorDemo2 {

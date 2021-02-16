@@ -7,7 +7,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
   * Copyright (c) ，2020 ， Jansonxu <br/>
   * This program is protected by copyright laws. <br/>
   *
-  * @author 徐文波
+  * @author
   * @version : 1.0
   */
 object UnboundedFlowDemo {

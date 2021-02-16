@@ -12,12 +12,12 @@ import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKaf
 import org.apache.kafka.clients.producer.ProducerRecord
 
 /**
-  * Description：kafkaSink演示（优化版）   从kafka中读数据，并写入kafka  <br/>
+  * Description：kafkaSink演示（优化版）   Source:kafka ，Sink:kafka  <br/>
   * Copyright (c) ，2020 ， Jansonxu <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日  
   *
-  * @author 徐文波
+  * @author
   * @version : 1.0
   */
 object KafkaSinkDemo2 {
@@ -73,7 +73,9 @@ object KafkaSinkDemo2 {
     exceptionDataStream.addSink(
       new FlinkKafkaProducer[String](defaultTopic, serializationSchema, producerConfig, semantic)
     )
-
+//    exceptionDataStream.addSink(
+//      new FlinkKafkaProducer[String]("NODE01:9092,NODE02:9092,NODE03:9092", "raytekTarget", new SimpleStringSchema)
+//    )
     //④启动
     env.execute
 
