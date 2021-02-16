@@ -1,6 +1,6 @@
 package samples
 
-import com.qf.entity.MiddleStudent
+import com.cub.entity.MiddleStudent
 import org.junit.Test
 
 /**
