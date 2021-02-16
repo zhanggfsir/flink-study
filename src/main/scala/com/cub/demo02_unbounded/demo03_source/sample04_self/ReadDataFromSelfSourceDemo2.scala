@@ -4,7 +4,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
 /**
   * Description：使用自定义的source实时读取指定的日志文件中的数据,送往flink 进行实时的处理，并显示结果。(代码优化)<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月27日  
   *

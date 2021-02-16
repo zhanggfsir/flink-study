@@ -9,7 +9,7 @@ import org.apache.flink.api.scala._
 
 /**
   * Description：使用source阶段的算子之fromCollection,将java中的集合封装到DataStream中<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日  
   *

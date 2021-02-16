@@ -7,7 +7,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
 /**
   * Description：用户自定义函数之子类方式（参数值动态传入），需求→筛选出当天所有途径红外测温仪编号为raytek_2的旅客信息。（）<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日
   *

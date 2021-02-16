@@ -9,7 +9,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
 /**
   * Description：flink中使用聚合函数实现累加器的效果 （此时不能使用累加器来完成）<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月04日  
   *

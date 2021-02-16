@@ -9,7 +9,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
 /**
   * Description：状态后端之FsBackendState验证<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月05日  
   *

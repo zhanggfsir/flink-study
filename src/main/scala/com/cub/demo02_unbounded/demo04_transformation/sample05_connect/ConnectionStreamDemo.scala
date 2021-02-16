@@ -5,7 +5,7 @@ import org.apache.flink.streaming.api.scala.{ConnectedStreams, DataStream, Split
 
 /**
   * Description：使用DataStream的算子之connect将两个类型不同的流合并在一起，分别记性单独处理。<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月27日  
   *

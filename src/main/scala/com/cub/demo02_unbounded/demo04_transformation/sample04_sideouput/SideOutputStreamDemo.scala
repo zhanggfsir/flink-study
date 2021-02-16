@@ -8,7 +8,7 @@ import org.apache.flink.util.Collector
 
 /**
   * Description：使用侧输出流来优化前一个split的案例。<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月27日
   *

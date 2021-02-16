@@ -4,7 +4,7 @@ import org.apache.flink.api.scala.ExecutionEnvironment
 
 /**
   * Description：计算指定源目录下所有文件中单词出现的次数。(源和目的地都是local→本地文件系统，如：windows)<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月24日  
   *

@@ -6,7 +6,7 @@ import org.apache.flink.api.scala._
 
 /**
   * Description：source算子之fromElements，参数是可变长的，类型可以是：基础数据类型，样例类，POJO(Plain old java object),元组。<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日  
   *

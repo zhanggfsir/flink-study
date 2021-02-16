@@ -8,7 +8,7 @@ import scala.io.Source
 
 /**
   * Description：使用flink的无界流的API, 从集合中读取数据，进行处理<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月26日  
   *

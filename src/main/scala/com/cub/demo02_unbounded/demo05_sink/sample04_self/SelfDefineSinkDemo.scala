@@ -16,7 +16,7 @@ import scala.collection.JavaConversions._
 
 /**
   * Description：自定义sink演示<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月02日  
   *

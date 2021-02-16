@@ -4,7 +4,7 @@ import org.junit.Test
 
 /**
   * Description：共通测试<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月05日  
   *

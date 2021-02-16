@@ -5,7 +5,7 @@ import org.apache.flink.streaming.api.scala.{SplitStream, StreamExecutionEnviron
 
 /**
   * Description：使用DataStream中的transformation算子将流分成不同特征的数据。<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月27日  
   *

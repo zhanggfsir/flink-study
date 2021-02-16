@@ -10,7 +10,7 @@ import org.apache.flink.api.scala._
 
 /**
   * Description：kafkaSink演示     Source:kafka ，Sink:kafka <br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日  
   *

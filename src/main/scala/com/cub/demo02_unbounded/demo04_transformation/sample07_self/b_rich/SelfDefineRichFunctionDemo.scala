@@ -13,7 +13,7 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 /**
   * Description：用户自定义富函数，需求→一批旅客正在通过各个关口设置的红外测温仪，
   * 将体温异常的旅客信息单独提取出来，存入到kafka消息队列中；将体温正常的旅客不予干预，直接通过监测出口。<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月28日
   *

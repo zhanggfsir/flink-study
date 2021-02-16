@@ -6,7 +6,7 @@ import org.apache.flink.core.fs.FileSystem
 
 /**
   * Description：计算指定源目录下所有文件中单词出现的次数。(源→hdfs, 目的地→hdfs，且：源和目的地需要动态传入)<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月24日  
   *

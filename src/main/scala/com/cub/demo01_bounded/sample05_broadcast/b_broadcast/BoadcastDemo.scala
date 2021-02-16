@@ -8,7 +8,7 @@ import scala.collection.mutable
 
 /**
   * Description：DataSet进行join操作使用broadcast来进行优化<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月03日  
   *

@@ -7,7 +7,7 @@ import org.rocksdb.RocksDBException;
 
 /**
  * Description：RocksDB演示<br/>
- * Copyright (c) ，2020 ， Jansonxu <br/>
+ * Copyright (c) ，2020 ，  <br/>
  * This program is protected by copyright laws. <br/>
  * Date： 2020年03月5日
  *

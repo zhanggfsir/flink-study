@@ -5,7 +5,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
 /**
   * Description：无界流演示（使用flink无界流处理实时监控netcat客户端和服务器交互的数据，进行实时的计算，将计算后的结果显示出来。）<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月24日
   *

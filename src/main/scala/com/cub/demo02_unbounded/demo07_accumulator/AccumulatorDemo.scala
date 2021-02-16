@@ -12,7 +12,7 @@ import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironm
 
 /**
   * Description：flink中的累加器演示<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月04日  
   *

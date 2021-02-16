@@ -12,7 +12,7 @@ import scala.collection.JavaConversions._
 
 /**
   * Description：es sink演示  Source:socket，Sink:es  <br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月02日  
   *

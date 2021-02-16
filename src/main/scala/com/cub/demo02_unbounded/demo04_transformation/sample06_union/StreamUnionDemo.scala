@@ -5,7 +5,7 @@ import org.apache.flink.streaming.api.scala.{SplitStream, StreamExecutionEnviron
 
 /**
   * Description：要求使用union算子，将上述的两种类型的DataStream合并起来，进行统一地处理，并显示结果<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月27日  
   *

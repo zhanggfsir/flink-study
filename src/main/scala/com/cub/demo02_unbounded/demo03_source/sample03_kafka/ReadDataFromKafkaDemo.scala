@@ -12,7 +12,7 @@ import org.apache.flink.api.common.serialization.{DeserializationSchema, SimpleS
 
 /**
   * Description：从kafka分布式集群中实时采集数据案例演示<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年02月27日  
   *

@@ -7,7 +7,7 @@ import org.apache.flink.streaming.api.windowing.windows.GlobalWindow
 
 /**
   * Description：滑动计数窗口案例演示<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月06日  
   *

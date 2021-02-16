@@ -9,7 +9,7 @@ import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironm
 
 /**
   * Description：自定义sink演示,sql语句优化版<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月03日
   *

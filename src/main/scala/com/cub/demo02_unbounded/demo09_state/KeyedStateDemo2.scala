@@ -11,7 +11,7 @@ import org.apache.flink.util.Collector
 
 /**
   * Description：键控状态演示,flatMapWithState版本<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月04日  
   *

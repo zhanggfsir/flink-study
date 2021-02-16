@@ -12,7 +12,7 @@ import org.apache.flink.util.Collector
 
 /**
   * Description：广播无界流演示<br/>
-  * Copyright (c) ，2020 ， Jansonxu <br/>
+  * Copyright (c) ，2020 ，  <br/>
   * This program is protected by copyright laws. <br/>
   * Date： 2020年03月03日  
   *
